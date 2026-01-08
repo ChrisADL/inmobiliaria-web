@@ -10,18 +10,23 @@
 <body>
 
     <!-- HERO -->
-    <header>
-        <h1>Acompañamos a las familias a invertir y construir su futuro</h1>
-        <p>
-            Somos una inmobiliaria familiar con experiencia en loteos y propiedades,
-            brindando asesoramiento profesional y acompañamiento en cada etapa.
-        </p>
+     <section class="hero">
+        
+        <div class="hero-logo">
+            <img src="img/logo.png" alt="Gonzalez Silva Inmobiliaria">
+        </div>
 
-        <a href="https://wa.me/5492664705794?text=Hola,%20quisiera%20consultar%20por%20loteos%20disponibles." target="_blank">
-            Consultanos por WhatsApp
-        </a>
+        <div class ="hero-content">             
+            <h1>Acompañamos a las familias a invertir y construir su futuro</h1>
+                <p>
+                    Somos una inmobiliaria familiar con experiencia en loteos y propiedades,
+                    brindando asesoramiento profesional y acompañamiento en cada etapa.
+                </p>
 
-    </header>
+            <!--<a href="#" class="btn-primary">Consultanos por WhatsApp</a>-->
+        </div>
+     </section>
+    
 
     <!-- QUIÉNES SOMOS -->
     <section>
@@ -35,31 +40,71 @@
     </section>
 
     <!-- QUÉ OFRECEMOS -->
-    <section>
+    <section class="services">
+
         <h2>Qué ofrecemos</h2>
 
-        <div>
-            <h3>Loteos</h3>
-            <p>
+        <div class = "services-grid">
+            <div class="services-item">
+                <h3>Loteos</h3>    
+                <p>
                 Loteos propios en distintas localidades, con información clara
                 y seguridad jurídica.
-            </p>
-        </div>
+                </p>
+            </div>
 
-        <div>
-            <h3>Propiedades</h3>
-            <p>
-                Casas y terrenos seleccionados, adaptados a distintas necesidades.
-            </p>
-        </div>
+            <div class="services-item">
+                <h3>Propiedades</h3>
+                <p>
+                    Casas y terrenos seleccionados, adaptados a distintas necesidades.
+                </p>
+            </div>
 
-        <div>
-            <h3>Acompañamiento legal</h3>
-            <p>
-                Asesoramiento profesional durante todo el proceso.
-            </p>
-        </div>
+            <div class="services-item">
+                <h3>Acompañamiento legal</h3>
+                <p>
+                    Asesoramiento profesional durante todo el proceso.
+                </p>
+        </div>                
+     </div>
     </section>
+    <section class="loteos">
+  <h2>Loteos en venta</h2>
+
+  <div class="loteos-grid">
+
+    <article class="loteo-card">
+      <a href="loteo-entre-sierras.html">
+        <img src="img/loteo-entre-sierras.jpg" alt="Loteo Entre Sierras">
+        <div class="loteo-info">
+          <h3>Loteo Entre Sierras</h3>
+          <span class="loteo-cta">Ver detalle</span>
+        </div>
+      </a>
+    </article>
+
+    <article class="loteo-card">
+      <a href="loteo-El Solar de Los Molles.html">
+        <img src="img/loteo-el-solar.jpg" alt="El Solar de Los Molles">
+        <div class="loteo-info">
+          <h3>El Solar de Los Molles</h3>
+          <span class="loteo-cta">Ver detalle</span>
+        </div>
+      </a>
+    </article>
+
+    <article class="loteo-card">
+      <a href="loteo-los-troncos-III.html">
+        <img src="img/loteo-los-troncos-III.jpg" alt="Loteo del Río">
+        <div class="loteo-info">
+          <h3>Loteo Los Torncos III</h3>
+          <span class="loteo-cta">Ver detalle</span>
+        </div>
+      </a>
+    </article>
+
+  </div>
+</section>
 
     <!-- LOTEOS DESTACADOS -->
     <section>
@@ -89,9 +134,18 @@
         <p>
             Estamos para ayudarte a dar el próximo paso con tranquilidad y confianza.
         </p>
-
-        <a href="#">Contactanos por WhatsApp</a>
+        <!--<a href="#">Contactanos por WhatsApp</a>-->
     </section>
+
+    <a href="https://wa.me/549XXXXXXXXXX?text=Hola%20quiero%20información%20sobre%20los%20loteos"
+        class="whatsapp-float"
+        target="_blank"
+        aria-label="Contactar por WhatsApp">
+
+        <img src="img/whatsapp.png" alt="WhatsApp">
+    </a>
+
+    
 
 </body>
 </html>

@@ -9,8 +9,8 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f9f9f9;
+    color: #333333;
+    background-color: #f2f2f2;
 }
 
 /* CONTENEDOR GENERAL */
@@ -22,41 +22,84 @@ section {
 }
 
 /* HERO */
-header {
+/*header {
     text-align: center;
-    background-color: #ffffff;
-    padding: 60px 20px;
+    background-color:#2f5d50;
+    color: #ffffff;
+    padding: 80px 20px;
+}*/
+.hero {
+        min-height: 100vh;
+        background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url("../img/hero.jpg");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        padding: 40px 20px;
+    }
+
+.hero-content {
+  max-width: 700px;
+  color: #ffffff;
+  margin-bottom: 40px;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
 }
 
-header h1 {
-    font-size: 2rem;
+.hero h1 {
+    font-size: 2.2rem;
     margin-bottom: 20px;
+    /*max-width: 700px;
+    margin:0 auto 30px;*/
 }
 
-header p {
+.hero p {
     font-size: 1.1rem;
+    line-height: 1.6;
     margin-bottom: 30px;
 }
 
 /* BOTONES */
+/*.btn-primary{
+
+    display: inline-block;
+    background-color: #3fa37c;
+    color: #ffffff;
+    padding: 14px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-primary:hover{
+    background-color: #358f6c;
+}*/
+
+
 a {
-    color: #0a7cff;
+    display: inline-block;
+    /*background-color: #3fa37c;*/
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 4px;
     text-decoration: none;
     font-weight: bold;
 }
 
 a:hover {
-    text-decoration: underline;
+    background-color: #358f6c;
+    /*text-decoration: underline;*/
 }
 
 /* SECCIONES */
 section {
     background-color: #ffffff;
-    margin-top: 20px;
+    margin-top: 30px;
     border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
 }
 
 section h2 {
+    color: #2f5d50;
     margin-bottom: 20px;
     font-size: 1.6rem;
 }
@@ -79,29 +122,203 @@ li {
 p {
     margin-bottom: 15px;
 }
+.hero {
+  position: relative;
+}
+
+.hero-logo {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+
+  background: rgba(255, 255, 255, 0.85);
+  padding: 12px 24px;
+  border-radius: 10px;
+  backdrop-filter: blur(4px);
+
+  max-width: 90%;
+  
+  text-align: center;
+
+   transition: transform 0.3s ease;
+}
+
+.hero-logo img {
+  height: 80px;
+  width: auto;
+}
+
+.hero-logo:hover {
+  transform: translateX(-50%) scale(1.08);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float img {
+  width: 32px;
+  height: 32px;
+}
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+}
+.loteos {
+  text-align: center;
+}
+
+.loteos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.loteo-card {
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.loteo-card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.loteo-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.loteo-info {
+  padding: 18px;
+}
+
+.loteo-info h3 {
+  color: #2f5d50;
+  margin-bottom: 10px;
+}
+
+.loteo-cta {
+  display: inline-block;
+  margin-top: 8px;
+  font-weight: bold;
+  color: #3fa37c;
+}
+.loteo-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.25);
+}
+
+
+
+
 
 /* RESPONSIVE - CELULARES */
+/*AJUSTAMOS EL FOCO DE LA IMÁGEN */
+
 @media (max-width: 768px) {
 
-    header,
-    section {
-        padding: 30px 15px;
+     .hero-logo:hover {
+    transform: translateX(-50%);
     }
 
-    header h1 {
-        font-size: 1.5rem;
+     .hero-logo {
+    top: 15px;
+    max-width: 95%;
+    padding: 10px 16px;
+  }
+
+  .hero-logo img {
+    height: 60px;
+  }
+  .whatsapp-float {
+    width: 65px;
+    height: 65px;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .whatsapp-float img {
+    width: 34px;
+    height: 34px;
+  }
+
+  .hero {
+          min-height: 90vh;
+          background-position: left 40%;                
+          align-items: flex-end;
+          padding: 30px 20px;
+                                
+          /*MEJORAMOS LA LECTURA DEL TEXTO*/
+         background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url("../img/hero.jpg");
+        }
+
+    .services{
+    text-align: left;
+    }
+    .services-grid{
+        grid-template-columns: 1fr;
+    }
+    .service-item{
+        padding: 20px 0;
+        border-bottom: 1px solid #e0e0e0;
+    }
+    .service-item:last-child{
+        border-bottom: none;
+    }
+    .service-item h3{
+        font-size: 1.2rem;
     }
 
-    header p {
-        font-size: 1rem;
-    }
 
-    section h2 {
-        font-size: 1.3rem;
-    }
-
-    body {
-        font-size: 0.95rem;
-    }
+.hero-content{
+    margin-bottom: 30px;
 }
+
+    /*AJUSTAMOS TAMAÑOS DE TEXTO*/
+
+    .hero h1 {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+
+  .hero p {
+    font-size: 0.95rem;    
+  }
+
+  /*MEJORAMOS EL BOTÓN*/
+   .btn-primary {
+    width: 100%;    
+    padding: 16px;
+    text-align: center;
+  }
+   .loteos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .loteo-card img {
+    height: 200px;
+  }
+} 
+
 
