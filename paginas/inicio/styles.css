@@ -11,6 +11,7 @@ body {
     line-height: 1.6;
     color: #333333;
     background-color: #f2f2f2;
+    padding-bottom: 80px;
 }
 
 /* CONTENEDOR GENERAL */
@@ -156,7 +157,7 @@ p {
   transform: translateX(-50%) scale(1.08);
   box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
-.whatsapp-float {
+/*.whatsapp-float {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -179,7 +180,7 @@ p {
 .whatsapp-float:hover {
   transform: scale(1.1);
   box-shadow: 0 6px 16px rgba(0,0,0,0.4);
-}
+}*/
 .loteos {
   text-align: center;
 }
@@ -234,15 +235,112 @@ p {
 .loteo-card:hover .loteo-info h3, .loteo-card:hover .loteo-cta{
   color: #ffffff;
 }
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 -4px 12px rgba(0,0,0,0.15);
+  z-index: 999;
+}
+
+/* Items */
+.bottom-nav a {
+  text-decoration: none;
+  color: #eff2f1;
+  font-size: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: colo  0.3s ease,transform 0.2s ease;
+}
+
+/* Íconos */
+.bottom-nav i {
+  font-size: 1.4rem;
+}
+
+.bottom-nav span {
+  font-size: 0.7rem;
+  margin-top: 4px;
+}
+
+.main-btn {
+  background: #35bb69;
+  color: white;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  margin-top: -25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+.main-btn:active{
+  transform:scale(0.9s);
+}
+
+.bottom-nav .icon {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.bottom-nav a{
+  transition: transform 0.15s ease, color 0.15s ease;
+}
+
+.bottom-nav a:active{  
+  transform: scale(0.92);
+  color:#dae3e0;
+}
 
 
+/* Botón central */
+.bottom-nav .main {
+  background: #cfe7de;
+  color: #eff2f1;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -25px;
+  font-size: 1.5rem;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+}
 
+/* Activo */
+.bottom-nav a.active {
+  color: #eff2f1;
+}
 
 /* RESPONSIVE - CELULARES */
 /*AJUSTAMOS EL FOCO DE LA IMÁGEN */
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
 
+  .bottom-nav {
+    display: none;
+     animation: slideUp 0.4s ease;
+
+  }
+  @keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+  
      .hero-logo:hover {
     transform: translateX(-50%);
     }
@@ -275,7 +373,7 @@ p {
           padding: 30px 20px;
                                 
           /*MEJORAMOS LA LECTURA DEL TEXTO*/
-         background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url("../img/hero.jpg");
+         background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url("../../activos/img/hero.jpg");
         }
 
     .services{
