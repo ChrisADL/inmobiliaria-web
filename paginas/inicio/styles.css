@@ -31,7 +31,8 @@ section {
 }*/
 .hero {
         min-height: 100vh;
-        background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url("../../activos/img/hero.jpg");
+        background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), 
+        url("../../activos/img/hero.jpg");
         background-size: cover;
         background-position: center;
         display: flex;
