@@ -24,3 +24,5 @@ self.addEventListener('fetch', event => {
   );
 });
 
+
+
