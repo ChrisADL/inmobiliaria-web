@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Entre Sierras | GS Inmobiliaria</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Loteo Entre Sierras en Santa Rosa del Conlara.San Luis. Argentina. Naturaleza, servicios y excelente ubicación.">
+
+  <!--ÍCONOS-->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!--CSS GLOBAL-->
+
+  <link rel="stylesheet" href="../../activos/css/styles.css">
+
+  <!--CSS ESPECÍFICO-->
+
+  <link rel="stylesheet" href="./style-entre-sierras.css">
+
+  <!-- SWIPER CARRUSEL-->
+ 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="loteo-hero">
+    <div class="loteo-hero-overlay">
+      <h1>Entre Sierras</h1>
+      <p>Santa Rosa del Conlara · San Luis</p>
+    </div>
+  </section>
+
+   <!-- INFO PRINCIPAL -->
+  <section class="loteo-detalle-contenido">
+    <div class="loteo-texto">
+      <h2>Viví la naturaleza, invertí con seguridad</h2>
+      <p>
+        Entre Sierras es un desarrollo inmobiliario pensado para quienes buscan
+        tranquilidad, vistas abiertas y conexión con el entorno natural,
+        sin resignar accesibilidad ni servicios.
+      </p>
+    </div>
+
+    <div class="loteo-ficha">
+      <ul>
+        <li><strong>📐 Superficie:</strong> desde 500 m²</li>
+        <li><strong>💡 Servicios:</strong> luz y agua</li>
+        <li><strong>📄 Documentación:</strong> escritura inmediata</li>
+        <li><strong>📍 Ubicación:</strong> Santa Rosa del Conlara</li>
+      </ul>
+    </div>
+  </section>
+
+  <!--CARRUSEL DE IMÁGENES-->
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<section class="loteo-galeria-contenido">
+  <h2>Galería</h2>
+
+  <div class="swiper galeria-swiper">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide">
+        <img src="../../activos/img/Entre_Sierras/entre-sierrar-2.jpg" alt="Entre Sierras vista aérea">
+      </div>
+
+      <div class="swiper-slide">
+        <img src="../../activos/img/Entre_Sierras/entre-sierras-3.jpg" alt="Lotes Entre Sierras">
+      </div>
+      
+      <!--AQUÍ AGREGO MÁS IMÁGENES-->
+      
+      <!--<div class="swiper-slide">
+        <img src="../../activos/img/Entre_Sierras/galeria-3.jpg" alt="Paisaje Entre Sierras">
+      </div>-->
+
+    </div>
+
+    <!-- Controles -->
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+</section>
+
+  <!-- VIDEO -->
+  
+
+  
+  <section class="loteo-video-contenido">
+  <h2>Conocé Entre Sierras</h2>
+
+  <div class="swiper video-swiper">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide">
+        <div class="video-wrapper">
+          <video class="loteo-video" muted playsinline preload="metadata">
+            <source src="../../activos/videos/entre-sierras/entre-sierras-2.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="video-wrapper">
+          <video class="loteo-video" muted playsinline preload="metadata">
+            <source src="../../activos/videos/entre-sierras/Entre-Sierras.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+</section>
+
+
+  <!-- MAPA -->
+  <section class="loteo-mapa container">
+    <h2>Ubicación</h2>
+    <iframe 
+      src="https://www.google.com/maps/embed?..."
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </section>
+  
+  <nav class="bottom-nav">
+      <a href="../../paginas/inicio/index.html" class="active">
+        <i class="fa-solid fa-house"></i>
+        <span>Inicio</span>
+      </a>
+
+      <a href="#loteos">
+        <i class="fa-solid fa-location-dot"></i>
+        <span>Loteos</span>
+      </a>
+
+      <a href="https://wa.me/5492664 02-2327" target="_blank" class="main-btn">
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+
+      <a href="#ayuda">
+        <i class="fa-solid fa-circle-question"></i>
+        <span>Ayuda</span>
+      </a>
+
+      <a href="#menu">
+        <i class="fa-solid fa-bars"></i>
+        <span>Menú</span>
+      </a>
+</nav>
+
+
+
+<script>
+  const swiper = new Swiper('.galeria-swiper', {
+    loop: true,
+    spaceBetween: 20,
+    slidesPerView: 1,
+    centeredSlides: true,
+
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+</script>
+
+<script>
+  const videos = document.querySelectorAll('.loteo-video');
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        const video = entry.target;
+        if (entry.isIntersecting) {
+          video.play();
+        } else {
+          video.pause();
+        }
+      });
+    },
+    { threshold: 0.6 }
+  );
+
+  videos.forEach(video => observer.observe(video));
+</script>
+
+
+</body>
+</html>
