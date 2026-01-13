@@ -1,4 +1,4 @@
-const CACHE_NAME = 'gs-inmo-v1';
+const CACHE_NAME = 'gs-inmo-v2';
 
 const FILES_TO_CACHE = [
   '/paginas/inicio/index.html',
