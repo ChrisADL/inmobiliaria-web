@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>El Solar de Los Molles | GS Inmobiliaria</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Loteo El Solar de Los Molles. A 20 min de Merlo .San Luis. Argentina. Naturaleza, servicios y excelente ubicación.">
+
+  <!--ÍCONOS-->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!--CSS GLOBAL-->
+
+  <link rel="stylesheet" href="../../activos/css/styles.css">
+
+  <!--CSS ESPECÍFICO-->
+
+  <link rel="stylesheet" href="../loteo-el-solar/style-el-solar.css">
+
+  <!-- SWIPER CARRUSEL-->
+ 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="loteo-hero">
+    <div class="loteo-hero-overlay">
+      <h1>Loteo</h1>
+      <p>Los Molles · San Luis</p>
+    </div>
+  </section>
+
+   <!-- INFO PRINCIPAL -->
+  <section class="loteo-video-info">
+  <h2>Conocé El Solar de Los Molles</h2>
+
+  <div class="loteo-video-box">
+    
+    <!-- VIDEO -->
+    <div class="video-lateral">
+      <video autoplay muted loop playsinline>
+        <source src="../../activos/videos/el-solar/el-solar.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <!-- TEXTO -->
+    <div class="loteo-info">
+      <h3>Viví la naturaleza, invertí con seguridad</h3>
+      <p>
+        El Solar de Los Molles es un paraíso en el valle del conlara. 
+        Un desarrollo inmobiliario pensado para quienes buscan
+        tranquilidad, vistas abiertas y conexión con el entorno natural,
+        sin resignar accesibilidad ni servicios.
+      </p>
+
+      <ul class="loteo-datos">
+        <li>📐 Superficie: desde 420 m²</li>
+        <li>💡 Servicios: luz y agua</li>
+        <li>📄 Documentación: escritura inmediata</li>
+        <li>📍 Ubicación: Los Molles</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+  <!--CARRUSEL DE IMÁGENES-->
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<section class="loteo-galeria-contenido">
+  <h2>Galería</h2>
+
+  <div class="swiper galeria-swiper">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide">
+        <img src="../../activos/img/el-solar/el-solar-2.jpeg" alt="El Solar vista aérea">
+      </div>
+
+      <div class="swiper-slide">
+        <img src="../../activos/img/el-solar/el-solar-3.jpeg" alt="El Solar">
+      </div>
+
+      <div class="swiper-slide">
+        <img src="../../activos/img/el-solar/el-solar-5.jpeg" alt="El Solar">
+      </div>
+      <div class="swiper-slide">
+        <img src="../../activos/img/el-solar/el-solar.jpeg" alt="El Solar">
+      </div>
+      
+      <!--AQUÍ AGREGO MÁS IMÁGENES-->
+      
+      <!--<div class="swiper-slide">
+        <img src="../../activos/videos/entre-sierras/Entre-Sierras.mp4" alt="Paisaje Entre Sierras">
+      </div>-->
+
+    </div>
+
+    <!-- Controles -->
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+</section>
+
+  <!-- MAPA -->
+
+ <section class="loteo-mapa">
+  <div class="mapa-header">
+      <h2>Ubicación del loteo</h2>
+    <a
+      href="https://maps.app.goo.gl/wg1GcsTT8o9RvnLD6"
+      target="_blank"
+      class="btn-mapa">
+      <aria-Label>"Como llegar a El Solar"</aria-Label>
+      📍 
+    </a>
+  </div>
+  
+  <div class="mapa-box">
+    <iframe
+      src="https://www.google.com/maps?q=Los%20Molles%20San%20Luis&output=embed"      
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
+  <div class="mapa-info">
+    <p>
+      El Solar se encuentra en un entorno natural privilegiado,
+      en la localidad de Los Molles, San Luis.
+    </p>
+    
+  </div>
+</section>
+
+  
+  <nav class="bottom-nav">
+      <a href="../../paginas/inicio/index.html" class="active">
+        <i class="fa-solid fa-house"></i>
+        <span>Inicio</span>
+      </a>
+
+      <a href="#loteos">
+        <i class="fa-solid fa-location-dot"></i>
+        <span>Loteos</span>
+      </a>
+
+      <a href="https://wa.me/5492664 02-2327" target="_blank" class="main-btn">
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+
+      <a href="#ayuda">
+        <i class="fa-solid fa-circle-question"></i>
+        <span>Ayuda</span>
+      </a>
+
+      <a href="#menu">
+        <i class="fa-solid fa-bars"></i>
+        <span>Menú</span>
+      </a>
+</nav>
+
+
+
+<script>
+  const swiper = new Swiper('.galeria-swiper', {
+    loop: true,
+    spaceBetween: 20,
+    slidesPerView: 1,
+    centeredSlides: true,
+
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+</script>
+
+<script>
+  const videos = document.querySelectorAll('.loteo-video');
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        const video = entry.target;
+        if (entry.isIntersecting) {
+          video.play();
+        } else {
+          video.pause();
+        }
+      });
+    },
+    { threshold: 0.6 }
+  );
+
+  videos.forEach(video => observer.observe(video));
+</script>
+
+
+</body>
+</html>

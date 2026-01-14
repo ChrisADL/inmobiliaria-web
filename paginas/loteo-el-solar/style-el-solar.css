@@ -4,8 +4,8 @@
 .loteo-hero {
   min-height: 70vh;
   background: 
-    linear-gradient(rgba(0,0,0,.15), rgba(0,0,0,.15)),
-    url("../../activos/img/Entre_Sierras/loteo-entre-sierras.jpg")
+    linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.25)),
+    url("../../activos/img/el-solar/loteo-el-solar_.jpg")
     center / cover no-repeat;
   position: relative;
   display: flex;
