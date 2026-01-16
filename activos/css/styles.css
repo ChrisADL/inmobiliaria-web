@@ -26,7 +26,7 @@ section {
 
 .hero {
         min-height: 100vh;
-        background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), 
+        background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), 
         url("../../activos/img/inicio-inmo/hero.jpg");
         background-size: cover;
         background-position: center;
@@ -152,7 +152,7 @@ p {
   height: 100%;
 }
 .loteo-card {  
-  background: #ffffff;
+  background: #c1bdbd;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
@@ -202,10 +202,24 @@ p {
   height: 70px;
   background: #ffffff;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: center;
+  /*align-items: center;*/
   box-shadow: 0 -4px 12px rgba(0,0,0,0.15);
   z-index: 999;
+}
+.bottom-nav-contenido{
+  max-width: 1000px; /*el mismo ancho la pagina atcual */
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 16px;
+  gap: 50px; /*Define el epacio entre cada botón. No Margin*/
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 16px 16px 0 0;
 }
 
 /* Items */
@@ -216,8 +230,9 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: colo  0.3s ease,transform 0.2s ease;
+  transition: color  0.3s ease,transform 0.2s ease;
   transition: transform 0.15s ease, color 0.15s ease;
+  padding: 8px 8px;
 }
 
 /* Íconos */
@@ -236,44 +251,55 @@ p {
 
 /* Activo */
 .bottom-nav a:active{  
-  transform: scale(0.92);
+  transform: scale(0.9);
   color:#dae3e0;
   /*color: #eff2f1;*/
 }
 
-/* Botón central */
-.bottom-nav .main {
-  background: #cfe7de;
-  color: #eff2f1;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: -25px;
-  font-size: 1.5rem;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+body {
+  padding-bottom: 90px; /* un poco más que los 70px del nav */
 }
-.main-btn {
-  background: #35bb69;
+
+/* Botón central */
+
+.bottom-nav .main-btn {
+  background: #25D366;
   color: white;
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  margin-top: -25px;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+
+  margin-top: -25px;
+  font-size: 22px;
+
+  flex-shrink: 0;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+
   transition: transform 0.3s ease;
 }
+
+.main-btn {
+  transform: translateY(-10px);
+}
+
 .main-btn:active{
-  transform:scale(0.9s);
+  transform:scale(0.9);
 }
 
 /* RESPONSIVE - CELULARES */
 /*AJUSTAMOS EL FOCO DE LA IMÁGEN */
+
+.contenedor {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+
 
 @media (max-width: 769px) {
 
